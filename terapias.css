@@ -1,0 +1,92 @@
+/* Fondo animado en degradado pastel */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(-45deg, #f8bbd0, #e0e0e0, #ffffff, #9e9e9e, #616161);
+  background-size: 400% 400%;
+  animation: fondoAnimado 15s ease infinite;
+  color: #000000;
+}
+
+/* Animación de fondo suave */
+@keyframes fondoAnimado {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Estilo para encabezado y pie de página */
+header, footer {
+  background-color: rgba(248, 187, 208, 0.8); /* Rosado pastel con transparencia */
+  color: #000000;
+  text-align: center;
+  padding: 20px;
+  animation: deslizarArriba 1s ease-out;
+}
+
+/* Animación de aparición desde arriba */
+@keyframes deslizarArriba {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+nav {
+  background-color: rgba(158, 158, 158, 0.8); /* Gris oscuro pastel */
+  text-align: center;
+  padding: 10px;
+  animation: deslizarAbajo 1s ease-out;
+}
+
+/* Animación de aparición desde abajo */
+@keyframes deslizarAbajo {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+nav a {
+  color: #000000;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #e91e63;
+}
+
+main {
+  background-color: rgba(255, 255, 255, 0.9);
+  margin: 40px auto;
+  max-width: 800px;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  animation: desvanecer 2s ease;
+}
+
+/* Animación de fade-in */
+@keyframes desvanecer {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+section h2 {
+  color: #e91e63;
+  animation: deslizarIzquierda 1s ease;
+}
+
+@keyframes deslizarIzquierda {
+  from { opacity: 0; transform: translateX(-30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+ul li {
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+ul li:hover {
+  transform: scale(1.05);
+}
